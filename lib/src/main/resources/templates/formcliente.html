@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+
+<title>Contato</title>
+</head>
+<body>
+
+	<h1>Contato</h1>
+	
+	<ul>
+		<li>
+			<a th:href="@{/}">Home</a>
+		</li>
+		<li>
+			<a th:href="@{/link_1}">Link 1</a>
+		</li>
+		<li>
+			<a th:href="@{/link_2}">Link 2</a>
+		</li>
+		<li>
+			<a th:href="@{/link_3}">Link 3</a>
+		</li>
+		<li>
+			<a th:href="@{/contato}">Contato</a>
+		</li>
+	</ul>
+	
+	<form action="#" th:action="@{/cliente}" method=post th:object="${Cliente}">
+		Nome: <input type="text" th:field="*{nome}"><br>
+		Marca/Fabricante:  <input type="text" th:field="*{marca}"><br>
+		Modelo:  <input type="text" th:field="*{modelo}"><br>
+		País:  <input type="text" th:field="*{país}"><br>
+		E-mail:  <input type="text" th:field="*{email}"><br>
+		<input type="submit" value="ENVIAR"><br>
+	</form>
+
+</body>
+</html>
