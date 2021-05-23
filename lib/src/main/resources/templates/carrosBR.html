@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org">
+<head>
+<meta charset="utf-8">
+<title>Carros Brasileiros</title>
+</head>
+<body>
+
+	<h1>Cars Info</h1>
+
+	<ul>
+		<li>
+			<a th:href="@{/}">Home</a>
+		</li>
+		<li>
+			<a th:href="@{/contato}">Contato</a>
+		</li>
+		<li>
+			<a th:href="@{/prodhome}">Cadastro de carros</a>
+		</li>
+	</ul>
+
+	<h1>Carros Nacionais</h1>
+	
+	<table>
+    	<thead>
+        	<tr>
+            	<td><b>ID</b></td>
+				<td><b>MARCA</b></td>
+				<td><b>MODELO</b></td>
+				<td><b>ANO</b></td>
+				<td><b>PAÍS</b></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${produtos}">
+				<td th:text="${prod.id}"></td>
+				<td th:text="${prod.marca}"></td>
+				<td th:text="${prod.modelo}"></td>
+				<td th:text="${prod.ano}"></td>
+				<td th:text="${prod.pais}"></td>
+				<td>
+				 	<a th:href="@{'upd/' + ${prod.id}}">
+				 		<b>EDITAR</b>
+				 </a>
+				 </td>
+				<td> 
+            		<form th:action="@{'apagar/' + ${prod.id}}" method=post>
+            			<input type="submit" value="X">
+            		</form>
+            	</td>           			         						
+			</tr>
+     	</tbody>
+    </table>
+    <br>
+    <a th:href="@{/prodhome}">VOLTAR</a>
+    
+</body>
+</html>

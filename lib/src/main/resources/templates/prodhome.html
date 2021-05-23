@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cadastro</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <h1 th:text="${nome}"></h1>
+    <ul>
+		<li>
+			<a th:href="@{/}">Home</a>
+		</li>
+		<li>
+			<a th:href="@{/contato}">Contato</a>
+		</li>
+		<li>
+			<a th:href="@{/prodhome}">Cadastro de carros</a>
+		</li>
+	</ul>
+	
+    <br>
+    
+    <h2>Cadastrar Carros Brasileiros</h2>
+    
+    <ul>
+    	<li>
+    		<a th:href="@{/produto}">
+    			Cadastrar - Carros Nacionais
+    		</a>
+    	</li>
+    	<li>	
+    		<a th:href="@{/produtos}">
+    			Listagem - Carros Nacionais
+    		</a>
+    	</li>
+    </ul>
+    
+     <h2>Cadastrar Carros Europeus</h2>
+    
+    <ul>
+    	<li>
+    		<a th:href="@{/produto2}">
+    			Cadastrar - Carros Europeus
+    		</a>
+    	</li>
+    	<li>	
+    		<a th:href="@{/produtos2}">
+    			Listagem - Carros Europeus
+    		</a>
+    	</li>
+    </ul>
+    
+    <h2>Cadastrar Carros Asiáticos</h2>
+    
+    <ul>
+    	<li>
+    		<a th:href="@{/produto3}">
+    			Cadastrar - Carros Asiáticos
+    		</a>
+    	</li>
+    	<li>	
+    		<a th:href="@{/produtos3}">
+    			Listagem - Carros Asiáticos
+    		</a>
+    	</li>
+    </ul>
+
+</body>
+</html>

@@ -19,25 +19,12 @@ public class Controller_1 {
 	@Autowired
 	private ApplicationContext context;
 	
+	//home
 	@GetMapping("/")
 	public String indexPg() {
 		return "index";
 	}
 	
-	@GetMapping("/link_1")
-	public String link1() {
-		return "link_1";
-	}
-	
-	@GetMapping("/link_2")
-	public String link2() {
-		return "link_2";
-	}
-	
-	@GetMapping("/link_3")
-	public String link3() {
-		return "link_3";
-	}
 	
 	//formulário	
 	@GetMapping("/contato")

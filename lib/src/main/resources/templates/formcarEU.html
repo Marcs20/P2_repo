@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Formulario</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Cars Info</h1>
+	
+	<h1 th:text="${nome}"></h1>
+    <ul>
+		<li>
+			<a th:href="@{/}">Home</a>
+		</li>
+		<li>
+			<a th:href="@{/contato}">Contato</a>
+		</li>
+		<li>
+			<a th:href="@{/prodhome}">Cadastro de carros</a>
+		</li>
+	</ul>
+	
+	<h2> Cadastrar carros</h2>
+	
+	<br>
+	
+	<form action="#" th:action="@{/produto2}" th:object="${prod}" method=post>
+		Marca/Fabricante:<input type="text" th:field="*{marca}"><br>
+		Modelo:<input type="text" th:field="*{modelo}"><br>
+		Ano:<input type="text" th:field="*{ano}"><br>
+		País:<input type="text" th:field="*{pais}"><br>
+		<input type="submit" value="CADASTRAR">
+	</form>
+	<br>
+	<a th:href="@{/prodhome}">VOLTAR</a>
+</body>
+</html>
