@@ -2,6 +2,8 @@ server:
   port : 8080
 
 spring:
+    resources:
+        add-mappings: true
     datasource:
         platform: postgres
         url: jdbc:postgresql://ec2-34-193-113-223.compute-1.amazonaws.com:5432/d92ufehs26lunj

@@ -2,15 +2,19 @@
 <html xmlns:th="http://www.thymeLeaf.org">
 <head>
 <meta charset="utf-8">
+    <link rel="stylesheet" th:href="@{css/main.css}">
 
 <title>Página Inicial</title>
 </head>
 <body>
 
-	<h1>Cars info</h1>
+<header>
+
+<h1>Cars info</h1>
 	
 	<h1 th:text="${nome}"></h1>
-    <ul>
+	
+    <ul class="menu">
 		<li>
 			<a th:href="@{/}">Home</a>
 		</li>
@@ -22,6 +26,80 @@
 		</li>
 	</ul>
 	
+</header>
+
+<article class="main">
+<div>
+	
+	<table class="table-home">
+		<caption>Carros Nacionais</caption>
+    	<thead>
+        	<tr>
+            	<td><b>ID</b></td>
+				<td><b>MARCA</b></td>
+				<td><b>MODELO</b></td>
+				<td><b>ANO</b></td>
+				<td><b>PAÍS</b></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${produtos}">
+				<td th:text="${prod.id}"></td>
+				<td th:text="${prod.marca}"></td>
+				<td th:text="${prod.modelo}"></td>
+				<td th:text="${prod.ano}"></td>
+				<td th:text="${prod.pais}"></td>      			         						
+			</tr>
+     	</tbody>
+    </table>
+    
+	
+	<table class="table-home">
+		<caption>Carros Europeus</caption>
+    	<thead>
+        	<tr>
+            	<td><b>ID</b></td>
+				<td><b>MARCA</b></td>
+				<td><b>MODELO</b></td>
+				<td><b>ANO</b></td>
+				<td><b>PAÍS</b></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${produtos2}">
+				<td th:text="${prod.id}"></td>
+				<td th:text="${prod.marca}"></td>
+				<td th:text="${prod.modelo}"></td>
+				<td th:text="${prod.ano}"></td>
+				<td th:text="${prod.pais}"></td>      			         						
+			</tr>
+     	</tbody>
+    </table>
+    
+	
+	<table class="table-home">
+		<caption>Carros Asiáticos</caption>
+    	<thead>
+        	<tr>
+            	<td><b>ID</b></td>
+				<td><b>MARCA</b></td>
+				<td><b>MODELO</b></td>
+				<td><b>ANO</b></td>
+				<td><b>PAÍS</b></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${produtos3}">
+				<td th:text="${prod.id}"></td>
+				<td th:text="${prod.marca}"></td>
+				<td th:text="${prod.modelo}"></td>
+				<td th:text="${prod.ano}"></td>
+				<td th:text="${prod.pais}"></td>       			         						
+			</tr>
+     	</tbody>
+    </table>
+    </div>
+ </article>
 
 </body>
 </html>

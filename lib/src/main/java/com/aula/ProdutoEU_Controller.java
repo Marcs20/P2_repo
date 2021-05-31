@@ -30,15 +30,15 @@ public class ProdutoEU_Controller {
 	@PostMapping("/produto2")
 	public String acao2(@ModelAttribute Produto prod, Model model) {
 		model.addAttribute("prod",prod);
-		ProdutoService2 pdao = context.getBean(ProdutoService2.class);
-		pdao.insert2(prod);
+		ProdutoService2 pdao1 = context.getBean(ProdutoService2.class);
+		pdao1.insert2(prod);
 		return "carsucessoEU";		
 	}
 	
 	@GetMapping("descr2/{id}")
 	public String read2(@PathVariable("id") int id, Model model) {
-		ProdutoService2 pdao = context.getBean(ProdutoService2.class);
-		Map<String, Object> produto = pdao.getProduto2(id);
+		ProdutoService2 pdao1 = context.getBean(ProdutoService2.class);
+		Map<String, Object> produto = pdao1.getProduto2(id);
 		Produto prod = new Produto((String)produto.get("marca"),(String)produto.get("modelo"),
 				(String)produto.get("ano"),(String)produto.get("país"));
 		model.addAttribute("prod", prod);
@@ -47,16 +47,16 @@ public class ProdutoEU_Controller {
 	
 	@GetMapping("/produtos2")
 	public String listar2(Model model) {
-		ProdutoService2 pdao = context.getBean(ProdutoService2.class);
-		List<Map<String,Object>> produtos2 = pdao.getProdutos2();
+		ProdutoService2 pdao11 = context.getBean(ProdutoService2.class);
+		List<Map<String,Object>> produtos2 = pdao11.getProdutos2();
 		model.addAttribute("produtos2",produtos2);
 		return "carrosEU";		
 	}
 	
 	@PostMapping("/apagar2/{id}")
 	public String deletar2(@PathVariable("id") int id,Model model) {
-		ProdutoService2 pdao = context.getBean(ProdutoService2.class);
-		pdao.deleteProduto2(id);
+		ProdutoService2 pdao1 = context.getBean(ProdutoService2.class);
+		pdao1.deleteProduto2(id);
 		return "redirect:/produtos2";
 	}
 	

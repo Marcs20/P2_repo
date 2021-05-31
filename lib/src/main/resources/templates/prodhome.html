@@ -3,10 +3,13 @@
 <head>
     <title>Cadastro</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{css/main.css}">
 </head>
 <body>
-    <h1 th:text="${nome}"></h1>
-    <ul>
+
+	<h1>Cars Info</h1>
+  
+    <ul class="menu">
 		<li>
 			<a th:href="@{/}">Home</a>
 		</li>
@@ -17,6 +20,8 @@
 			<a th:href="@{/prodhome}">Cadastro de carros</a>
 		</li>
 	</ul>
+	
+	  <h2 th:text="${nome}"></h2>
 	
     <br>
     

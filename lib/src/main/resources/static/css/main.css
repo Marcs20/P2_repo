@@ -1,0 +1,60 @@
+@charset "utf-8";
+
+body{ font-family: helvetica,arial;
+
+
+}
+
+
+li{
+	list-style-type: none;
+}
+
+a{
+	text-decoration:none;
+}
+
+/* menu */
+
+.menu{
+	float: right;
+	margin-right: 10%;	
+}
+
+.menu a{
+	color: black;
+	font-weight: bold;
+	
+}
+
+.menu a:hover{
+	color: orange;
+}
+
+.menu li{
+	display: inline;
+}
+
+
+/* tabela */
+
+.main div{
+	display: flex;
+	float: left;
+}
+
+.table-home{
+	margin: 5%;
+}
+
+td{
+	border-style: solid;
+	border-color: transparent;
+	background-color: #E4E0E0;
+	/*padding: 5px 15px 5px 15px;*/
+}
+
+
+
+
+

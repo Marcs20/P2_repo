@@ -10,25 +10,25 @@ import org.springframework.stereotype.Service;
 public class ProdutoService3 {
 	
 	@Autowired
-	ProdutoDAO3 pdao;
+	ProdutoDAO3 pdao2;
 	
 	public void insert3(Produto prod) {
-		pdao.insert3(prod);
+		pdao2.insert3(prod);
 	}
 	
 	public Map<String, Object> getProduto3(int id){
-		return pdao.getProduto3(id);
+		return pdao2.getProduto3(id);
 	}
 	
 	public List<Map<String, Object>> getProdutos3(){
-		return pdao.getProdutos3();
+		return pdao2.getProdutos3();
 	}
 	
 	public void deleteProduto3(int id) {
-		pdao.deleteProduto3(id);
+		pdao2.deleteProduto3(id);
 	}
 	
 	public void updateProduto3(int id, Produto prod) {
-		pdao.updateProduto3(id, prod);
+		pdao2.updateProduto3(id, prod);
 	}
 }
