@@ -4,13 +4,14 @@
 <meta charset="utf-8">
     <link rel="stylesheet" th:href="@{css/main.css}">
 
-<title>Página Inicial</title>
+	<title>Página Inicial</title>
+	
 </head>
 <body>
 
 <header>
 
-<h1>Cars info</h1>
+<h1>CARS INFO</h1>
 	
 	<h1 th:text="${nome}"></h1>
 	
@@ -29,10 +30,11 @@
 </header>
 
 <article class="main">
+
 <div>
-	
+
 	<table class="table-home">
-		<caption>Carros Nacionais</caption>
+		<caption class="table-home-title">Carros Nacionais</caption>
     	<thead>
         	<tr>
             	<td><b>ID</b></td>
@@ -55,7 +57,7 @@
     
 	
 	<table class="table-home">
-		<caption>Carros Europeus</caption>
+		<caption class="table-home-title">Carros Europeus</caption>
     	<thead>
         	<tr>
             	<td><b>ID</b></td>
@@ -78,7 +80,7 @@
     
 	
 	<table class="table-home">
-		<caption>Carros Asiáticos</caption>
+		<caption class="table-home-title">Carros Asiáticos</caption>
     	<thead>
         	<tr>
             	<td><b>ID</b></td>
@@ -100,6 +102,8 @@
     </table>
     </div>
  </article>
-
+ <footer>
+ 	<h3>Site por Amauri Carvalho, Filipe Gama e Marcos de jesus</h3>
+ </footer>
 </body>
 </html>

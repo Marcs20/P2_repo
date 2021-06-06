@@ -4,11 +4,11 @@
 <meta charset="utf-8">
     <link rel="stylesheet" th:href="@{css/main.css}">
 
-<title>Contato</title>
+	<title>Contato</title>
 </head>
 <body>
 
-	<h1>Contato</h1>
+	<h1>CARS INFO</h1>
 	
 	<ul class="menu">
 		<li>
@@ -22,14 +22,22 @@
 		</li>
 	</ul>
 	
-	<form action="#" th:action="@{/cliente}" method=post th:object="${Cliente}">
-		Nome: <input type="text" th:field="*{nome}"><br>
-		Marca/Fabricante:  <input type="text" th:field="*{marca}"><br>
-		Modelo:  <input type="text" th:field="*{modelo}"><br>
-		País:  <input type="text" th:field="*{país}"><br>
-		E-mail:  <input type="text" th:field="*{email}"><br>
-		<input type="submit" value="ENVIAR"><br>
-	</form>
-
+	<h2 class="h2-contato">Contato</h2>
+	<div class="cont-form">
+		<h2>FORMULÁRIO</h2>
+		<form action="#" th:action="@{/cliente}" method=post th:object="${Cliente}">
+			Nome:<br> <input type="text" th:field="*{nome}"><br>
+			Marca/Fabricante: <br> <input type="text" th:field="*{marca}"><br>
+			Modelo: <br>  <input type="text" th:field="*{modelo}"><br>
+			País: <br> <input type="text" th:field="*{país}"><br>
+			E-mail: <br>  <input type="text" th:field="*{email}"><br><br>
+			<input type="submit" value="ENVIAR"><br>
+		</form>
+		<br><br>
+		<a th:href="@{/contato}" class="link-get-back">VOLTAR</a>
+	</div>
+ <footer>
+ 	<h3>Site por Amauri Carvalho, Filipe Gama e Marcos de jesus</h3>
+ </footer>	
 </body>
 </html>

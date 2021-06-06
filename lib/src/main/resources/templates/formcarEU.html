@@ -24,15 +24,20 @@
 	<h2> Cadastrar carros</h2>
 	
 	<br>
-	
+	<div class="cont-form">
+	<h2>DADOS DO CARRO</h2>
 	<form action="#" th:action="@{/produto2}" th:object="${prod}" method=post>
 		Marca/Fabricante:<input type="text" th:field="*{marca}"><br>
 		Modelo:<input type="text" th:field="*{modelo}"><br>
 		Ano:<input type="text" th:field="*{ano}"><br>
-		País:<input type="text" th:field="*{pais}"><br>
+		País:<input type="text" th:field="*{pais}"><br><br>
 		<input type="submit" value="CADASTRAR">
 	</form>
-	<br>
-	<a th:href="@{/prodhome}">VOLTAR</a>
+	<br><br>
+	<a th:href="@{/prodhome}" class="link-get-back">VOLTAR</a>
+	</div>
+	<footer>
+ 	<h3>Site por Amauri Carvalho, Filipe Gama e Marcos de jesus</h3>
+ </footer>
 </body>
 </html>

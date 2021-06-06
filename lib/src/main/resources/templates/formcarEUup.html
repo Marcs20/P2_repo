@@ -3,8 +3,134 @@
 <head>
     <title>Formulario</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+  
+			body{ font-family: helvetica,arial;
+				  background-color: #2f2f2e;
+			}
+			
+			
+			li{
+				list-style-type: none;
+			}
+			
+			a{
+				text-decoration:none;
+				color: white;
+			}
+			
+			h1,h2{
+				color: white;
+			}
+			
+			h1{
+				text-shadow: grey -15px 15px 5px;
+				color: red;
+				text-align: center;
+				
+			}
+			
+			footer{
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				/*background-color: black;*/
+				color: white;
+				text-align: center;
+			}
+			
+			/* menu */
+			
+			.menu{
+				float: right;
+				margin-right: 5%;
+				
+			}
+			
+			.menu a{
+				color: white;
+				font-weight: bold;
+				
+			}
+			
+			.menu a:hover{
+				color: orange;
+			}
+			
+			.menu li{
+				display: inline;
+			}
+			
+			
+			/* tabela home */
+			
+			.main div{
+				display: flex;
+				flex-wrap: wrap;
+				float: left;
+			}
+			
+			.table-home{
+				border-style: solid;
+				border-width: 0px 2px 0px 2px;
+				border-color: white;
+			}
+			
+			
+			thead b{
+				color: red;
+			}
+			
+			td{
+				border-style: solid;
+				border-color: transparent;
+				padding: 0px 15px 0px 0px;
+				color: white;
+			}
+			
+			.table-home-title{
+				font-weight: bold;
+				font-size: 20px;
+				color: white;
+			}
+			
+			/* contato / formulários */
+			
+			.contato-link{
+				font-weight: bold;
+				background-color: white;
+				color: black;
+				padding: 8px;
+				border-radius: 3px;
+				box-shadow: grey -2px 2px 2px;
+			}
+			
+			.contato-link:hover{
+				color:red;
+			}
+			
+			form{
+				color: white;
+				display: inline-block;
+				position: relative;
+			}
+			
+			.cont-form{
+				margin-top: 3%;
+				text-align: center;
+				position: absolute;
+				width:100%;
+			}
+			
+			.link-get-back:hover{
+				color: orange;
+			}
+        	
+        </style>
 </head>
 <body>
+
+	<H1>CARS INFO</H1>
 
 	    <ul class="menu">
 			<li>
@@ -20,15 +146,20 @@
 
 	<h2>Editar carro cadastrado</h2>
 	
-	<form action="#" th:action="@{'/upd2/' + ${id}}" method=post>
-		Marca/Fabricante:<input type="text" th:field="${antigo.marca}"><br>
-		Modelo:<input type="text" th:field="${antigo.modelo}"><br>
-		Ano:<input type="text" th:field="${antigo.ano}"><br>
-		País:<input type="text" th:field="${antigo.pais}"><br>
-		<input type="submit" value="CADASTRAR">
-	</form>
-	
-	
-
+	<div class="cont-form">
+			<h2>ATUALIZAR DADOS</h2>
+		<form action="#" th:action="@{'/upd2/' + ${id}}" method=post>
+			Marca/Fabricante:<input type="text" th:field="${antigo.marca}"><br>
+			Modelo:<input type="text" th:field="${antigo.modelo}"><br>
+			Ano:<input type="text" th:field="${antigo.ano}"><br>
+			País:<input type="text" th:field="${antigo.pais}"><br><br>
+			<input type="submit" value="CADASTRAR">
+		</form>
+		<br><br>
+		<a th:href="@{/produtos2}" class="link-get-back">VOLTAR</a>
+	</div>
+<footer>
+ 	<h3>Site por Amauri Carvalho, Filipe Gama e Marcos de jesus</h3>
+ </footer>
 </body>
 </html>

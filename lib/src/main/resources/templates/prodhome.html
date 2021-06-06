@@ -3,11 +3,12 @@
 <head>
     <title>Cadastro</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
     <link rel="stylesheet" th:href="@{css/main.css}">
 </head>
 <body>
 
-	<h1>Cars Info</h1>
+	<h1>CARS INFO</h1>
   
     <ul class="menu">
 		<li>
@@ -21,54 +22,67 @@
 		</li>
 	</ul>
 	
-	  <h2 th:text="${nome}"></h2>
+	  <h2 class="h2-contato" th:text="${nome}"></h2>
 	
     <br>
-    
-    <h2>Cadastrar Carros Brasileiros</h2>
-    
-    <ul>
-    	<li>
-    		<a th:href="@{/produto}">
-    			Cadastrar - Carros Nacionais
-    		</a>
-    	</li>
-    	<li>	
-    		<a th:href="@{/produtos}">
-    			Listagem - Carros Nacionais
-    		</a>
-    	</li>
-    </ul>
-    
-     <h2>Cadastrar Carros Europeus</h2>
-    
-    <ul>
-    	<li>
-    		<a th:href="@{/produto2}">
-    			Cadastrar - Carros Europeus
-    		</a>
-    	</li>
-    	<li>	
-    		<a th:href="@{/produtos2}">
-    			Listagem - Carros Europeus
-    		</a>
-    	</li>
-    </ul>
-    
-    <h2>Cadastrar Carros Asiáticos</h2>
-    
-    <ul>
-    	<li>
-    		<a th:href="@{/produto3}">
-    			Cadastrar - Carros Asiáticos
-    		</a>
-    	</li>
-    	<li>	
-    		<a th:href="@{/produtos3}">
-    			Listagem - Carros Asiáticos
-    		</a>
-    	</li>
-    </ul>
-
+    	    
+	    <div class="cadastro-links">
+	    
+	    <h2>Carros Brasileiros</h2>
+	    
+	    <ul>
+	    	<li>
+	    		<a class="link-cadastrar" th:href="@{/produto}">
+	    			CADASTRAR
+	    		</a>
+	    	</li>
+	    	<li>	
+	    		<a class="link-listagem" th:href="@{/produtos}">
+	    			LISTAGEM
+	    		</a>
+	    	</li>
+	    </ul>
+	    
+	    </div>
+	    
+	     
+	    
+	  <div class="cadastro-links">
+	    	<h2>Carros Europeus</h2>
+	    <ul>
+	    	<li>
+	    		<a class="link-cadastrar" th:href="@{/produto2}">
+	    			CADASTRAR
+	    		</a>
+	    	</li>
+	    	<li>	
+	    		<a  class="link-listagem" th:href="@{/produtos2}">
+	    			LISTAGEM
+	    		</a>
+	    	</li>
+	    </ul>
+	    
+	     </div>
+	    
+	    
+	    
+	<div class="cadastro-links">
+	<h2>Carros Asiáticos</h2>
+	    <ul>
+	    	<li>
+	    		<a class="link-cadastrar" th:href="@{/produto3}">
+	    			CADASTRAR
+	    		</a>
+	    	</li>
+	    	<li>	
+	    		<a  class="link-listagem" th:href="@{/produtos3}">
+	    			LISTAGEM
+	    		</a>
+	    	</li>
+	    </ul>
+    </div>
+<footer>
+ 	<h3>Site por Amauri Carvalho, Filipe Gama e Marcos de jesus</h3>
+ </footer>
 </body>
 </html>

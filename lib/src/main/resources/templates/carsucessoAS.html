@@ -7,6 +7,8 @@
 </head>
 <body>
 
+	<h1>CARS INFO</h1>
+
 	<ul class="menu">
 		<li>
 			<a th:href="@{/}">Home</a>
@@ -18,12 +20,14 @@
 			<a th:href="@{/prodhome}">Cadastro de carros</a>
 		</li>
 	</ul>
-
-	<h1>Veículo cadastrado</h1>
-	<div th:text="'marca : ' + ${prod.marca}"></div>
-	<div th:text="'modelo : ' + ${prod.modelo}"></div>
-	<div th:text="'ano : ' + ${prod.ano}"></div>
-	<div th:text="'país : ' + ${prod.pais}"></div>
-	<a th:href="@{/produto3}">VOLTAR</a>
+	
+	<div class="sucess-msg">
+		<h2>Veículo cadastrado</h2>
+		<div th:text="'marca : ' + ${prod.marca}"></div>
+		<div th:text="'modelo : ' + ${prod.modelo}"></div>
+		<div th:text="'ano : ' + ${prod.ano}"></div>
+		<div th:text="'país : ' + ${prod.pais}"></div><br>
+		<a th:href="@{/produto3}" class="link-get-back">VOLTAR</a>
+	</div>
 </body>
 </html>
